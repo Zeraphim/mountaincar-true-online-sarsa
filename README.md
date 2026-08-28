@@ -2,6 +2,8 @@
 
 A from-scratch reinforcement-learning implementation that learns a tile-coded action-value function for Gymnasium's MountainCar environment.
 
+![Current deterministic evaluation rollout](assets/mountaincar_policy.gif)
+
 ## What it does
 
 The car must build momentum by first driving away from the hill, then reversing uphill to reach the goal. The agent learns from reward feedback using true online Sarsa(lambda), eligibility traces, epsilon-greedy exploration, and tile-coded state-action features.
@@ -27,8 +29,6 @@ Set `--seed` for repeatability.
 The committed assets were generated with `python demo.py --episodes 8000`. The run includes successful training episodes, but its single deterministic evaluation rollout timed out at MountainCar's 200-step limit. It is included as a reproducible baseline, not evidence of reliable task completion.
 
 ![Learning curve for the current 8,000-episode run](assets/learning_curve.png)
-
-![Current deterministic evaluation rollout](assets/mountaincar_policy.gif)
 
 ## Implementation
 
