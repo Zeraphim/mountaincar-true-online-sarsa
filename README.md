@@ -20,7 +20,15 @@ The command saves:
 - `artifacts/learning_curve.png` — episode length during learning;
 - `artifacts/mountaincar_policy.gif` — a newly recorded evaluation rollout.
 
-Increase `--episodes` if the agent has not learned a reliable policy on your machine. Set `--seed` for repeatability.
+Set `--seed` for repeatability.
+
+## Current training run
+
+The committed assets were generated with `python demo.py --episodes 8000`. The run includes successful training episodes, but its single deterministic evaluation rollout timed out at MountainCar's 200-step limit. It is included as a reproducible baseline, not evidence of reliable task completion.
+
+![Learning curve for the current 8,000-episode run](assets/learning_curve.png)
+
+![Current deterministic evaluation rollout](assets/mountaincar_policy.gif)
 
 ## Implementation
 
@@ -29,7 +37,7 @@ Increase `--episodes` if the agent has not learned a reliable policy on your mac
 
 ## LinkedIn demo
 
-Use the generated GIF beside the learning curve. Open with two seconds of an untrained car failing, then show the learned car building momentum and reaching the flag. State the environment and learning rule on screen.
+Use a verified successful rollout beside the learning curve. Open with two seconds of an untrained car failing, then show the learned car building momentum and reaching the flag. State the environment and learning rule on screen.
 
 ## Limitations
 
